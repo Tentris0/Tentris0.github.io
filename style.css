@@ -2,7 +2,7 @@ body {
   background:#000000 ;
   color: rgb(55, 166, 41);
   padding: 10px;
-  font-family: arial;
+  font-family: pixelated;
 }
 #all-contents {
 max-width: 800px;
@@ -91,7 +91,7 @@ body {
   background: #000000;
   color: rgb(55, 166, 41);
   padding: 10px;
-  font-family: arial;
+  font-family: pixelated;
 }
 #all-contents {
   max-width: 800px;
@@ -136,4 +136,16 @@ nav {
 main {
   background: darkgreen;
   display: flex;
+  size: 10px;
+}
+.sidebar {
+  margin-right: 25px;
+  padding: 10px;
+}
+.sidebar-img {
+  width: 200px;
+}
+.content {
+  flex: 1;
+  padding: 15px;
 }
