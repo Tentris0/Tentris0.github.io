@@ -2,7 +2,7 @@ body {
   background:#000000 ;
   color: rgb(55, 166, 41);
   padding: 10px;
-  font-family: pixelated;
+  font-family: monospace;
 }
 #all-contents {
 max-width: 800px;
@@ -89,7 +89,7 @@ main {
 
 /* portfolio styles */
 .content h1 {
-  color: black
+  color: rgb(55, 166, 41);
 }
 #portfolio {
   list-style-type: none;
@@ -105,5 +105,5 @@ main {
 }
 #portfolio a{
   text-decoration: none;
-  color: #454545
+  color:darkseagreen;
 }
