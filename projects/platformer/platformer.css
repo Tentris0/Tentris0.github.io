@@ -3,8 +3,8 @@ body {
 }
 
 canvas {
-  background-color: black;
-  
+  background-color: none;
+  background-image: "https://www.myabandonware.com/media/screenshots/f/fireball-1201/fireball_4.png" ;
 }
 
 img {
