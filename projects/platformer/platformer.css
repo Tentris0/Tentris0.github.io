@@ -1,12 +1,9 @@
 body {
   margin: 0px;
 }
-
 canvas {
-  background-color: none;
-  background-image: "https://www.myabandonware.com/media/screenshots/f/fireball-1201/fireball_4.png" ;
+  background-image: url("https://wallpapercave.com/wp/wp4615511.jpg");
 }
-
-img {
+img {  
   display: none;
 }
