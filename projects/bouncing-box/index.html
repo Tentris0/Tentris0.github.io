@@ -32,10 +32,10 @@
          </head>
                  <body class="board">
 	        <!-- HTML for the box -->
-	     <div class="box">?</div>
+	         <div class="box">?</div>
 
 	    <script>
-	    (function (){
+	      (function (){
 			'use strict'
 			/* global jQuery */
 
@@ -48,7 +48,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			var interval = setInterval(update, 50);
 			
 
             
@@ -73,36 +73,40 @@
 			// TODO 2 - Variable declarations 
 			/* Your Variable Declaration HERE */
 			
-			var newSpeedY = speedY + 10;
+			var positionY = 0;
+			var speedY = 0;
+			var positionX = 0
+		    var points = 0;
+			var speedX = 10 + 10;
 			var newPositionX = positionX + 10;
-		    var points = 1;
-			var newSpeedX = speedX + 10;
-			var newPositionY = positionX + 10;
+			var newPositionY = positionY + 10;
 			var boardHeight = jQuery(window).height();
-			
+
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! */
 		     
 			    function update(){
-				positionX = positionX + speedX;
+			    moveBoxTo(0)
+				newPositionX = positionX + speedX;
 				if(positionX > boardwidth) {
 					speedX = -speedX * 1
 				}
+				moveBoxTo(10)
                 if(positionX < 0){
 					speedX = -speedX * -1
 				}
-				positionY = positionY + speedY;
+				moveBoxTo(20)
+				newPositionY = positionY + speedY;
 				if(positionY > boardHeight){
 					speedY = -speedY * 1
 				}
 				if(positionY < 10){
 					speedY = -speedY * -1 
 				} 
-				moveBoxTo(positionX)
+				moveBoxTo(positionX, positionY)
 				moveBoxTo(boardWidth)
-				positionX()
 			    };
 
 
@@ -134,7 +138,7 @@
 					speedY = speedY + 3
 				}
 			};
-       })();
+          })();
 	   </script>
    </body>
 
