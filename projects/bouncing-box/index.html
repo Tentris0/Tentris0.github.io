@@ -5,7 +5,7 @@
 	<title>Bouncing Box</title>
 	<script src="jquery.min.js"></script>
 	<style>
-	body{
+	    body {
         background-color: black;
 	}
 		.box {
@@ -26,16 +26,16 @@
 			background-image: none;
 			background-repeat: no-repeat;
 		}
-	</style>
-	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	    </style>
+	    <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
-</head>
-<body class="board">
-	<!-- HTML for the box -->
-	<div class="box">?</div>
+         </head>
+                 <body class="board">
+	        <!-- HTML for the box -->
+	     <div class="box">?</div>
 
-	<script>
-	(function(){
+	    <script>
+	    (function (){
 			'use strict'
 			/* global jQuery */
 
@@ -72,11 +72,12 @@
 			
 			// TODO 2 - Variable declarations 
 			/* Your Variable Declaration HERE */
-			var speedY = 10
-			var positionX = 1;
+			
+			var newSpeedY = speedY + 10;
+			var newPositionX = positionX + 10;
 		    var points = 1;
-			var speedX = 10;
-			var positionY = 1;
+			var newSpeedX = speedX + 10;
+			var newPositionY = positionX + 10;
 			var boardHeight = jQuery(window).height();
 			
 			/* 
@@ -97,10 +98,12 @@
 					speedY = -speedY * 1
 				}
 				if(positionY < 10){
-					speedY = -speedY * -1
+					speedY = -speedY * -1 
 				} 
-				moveBoxTo(positionX, positionY)
-			};
+				moveBoxTo(positionX)
+				moveBoxTo(boardWidth)
+				positionX()
+			    };
 
 
 		
@@ -131,7 +134,7 @@
 					speedY = speedY + 3
 				}
 			};
-    })();
+       })();
 	   </script>
    </body>
 
